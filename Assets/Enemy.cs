@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     Transform target;
     Vector2 moveDirection;
 
+    public int damage = 1;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
