@@ -1,27 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
-    private int currentHealth;
+    private int currentHealth = 3;
 
     public HealthUI healthUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHealth = maxHealth;
-        healthUI.SetMaxHearts(maxHealth);
+        healthUI = GameObject.FindObjectsByType <HealthUI> (FindObjectsSortMode.None).First();
+       // currentHealth = maxHealth;
+       // healthUI.SetMaxHearts(maxHealth);
     }
 
-   private void OnTrigger2D(Collider2D collision)
+   void OnCollisionEnter2D(Collision2D collision)
    {
-    Enemy enemy = collision.GetComponent<Enemy>();
+    Enemy enemy = collision.gameObject.GetComponent <Enemy>();
+    Debug.Log("collisionHappen");
+
     if (enemy)
     {
         TakeDamage(enemy.damage);
+        Debug.Log("damageTaken");
     }
    }
 
