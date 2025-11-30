@@ -2790,7 +2790,7 @@ Transform:
   m_GameObject: {fileID: 519520640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.07, y: 6.06, z: 0}
+  m_LocalPosition: {x: 43.91, y: 6.03, z: 0}
   m_LocalScale: {x: 0.2135108, y: 0.2135108, z: 0.2135108}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3940,6 +3940,7 @@ GameObject:
   - component: {fileID: 876730075}
   - component: {fileID: 876730074}
   - component: {fileID: 876730073}
+  - component: {fileID: 876730076}
   m_Layer: 0
   m_Name: HiddenArea
   m_TagString: Untagged
@@ -3991,7 +3992,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 12.8, y: 12.8}
+  m_Size: {x: 30, y: 30}
   m_EdgeRadius: 0
 --- !u!212 &876730074
 SpriteRenderer:
@@ -4057,12 +4058,56 @@ Transform:
   m_GameObject: {fileID: 876730071}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.24, y: 6.03, z: 0}
-  m_LocalScale: {x: 0.10727154, y: 0.086147994, z: 1}
+  m_LocalPosition: {x: 43.96, y: 6.23, z: 0}
+  m_LocalScale: {x: 0.13767229, y: 0.11056234, z: 1.2834}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &876730076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876730071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64f0ecc053aab3469157010f458d4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneShot: 0
+  collisionTag: Astronaut
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 876730074}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: 
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 876730074}
+        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
+        m_MethodName: 
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &880231581
 PrefabInstance:
   m_ObjectHideFlags: 0
