@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth = 3;
 
     public HealthUI healthUI;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
     if(currentHealth <= 0)
     {
         //player dead! game over etc
+        
     }
    }
 }

@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4d1431507303a4481225614c96de2c, type: 3}
   m_Name: GoodAlienDialogue
   m_EditorClassIdentifier: 
-  npcName: 
-  npcPortrait: {fileID: 0}
-  dialogueLines: []
-  typingSpeed: 0.05
-  autoProgressLines: 
+  npcName: Good Alien
+  npcPortrait: {fileID: 4640643453467374963, guid: 6c986dfb0b804244cbea74f0d742876b, type: 3}
+  dialogueLines:
+  - Congratulations!
+  - You managed to collect all the map pieces on time.
+  - You can continue your journey!
+  autoProgressLines: 010000
   autoProgressDelay: 1.5
+  typingSpeed: 0.05
